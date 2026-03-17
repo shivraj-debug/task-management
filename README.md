@@ -1,4 +1,3 @@
-# TaskFlow — Task Management System (Track A)
 
 A full-stack Task Management System built with **Node.js + TypeScript** (backend) and **Next.js + Tailwind CSS + shadcn/ui** (frontend).
 
@@ -20,7 +19,7 @@ task-management/
 - **JWT Authentication** — Access token (15 min) + Refresh token (7 days) with rotation
 - **bcrypt** password hashing (12 rounds)
 - **Full Task CRUD** — create, read, update, delete, toggle status
-- **Pagination** — page/limit with full metadata
+- **Pagination** — page/limit
 - **Filtering** — by status (`PENDING`, `IN_PROGRESS`, `COMPLETED`) and priority (`LOW`, `MEDIUM`, `HIGH`)
 - **Search** — case-insensitive title search
 - **Sorting** — by `createdAt`, `updatedAt`, `dueDate`, or `title`
@@ -32,9 +31,7 @@ task-management/
 - **Login & Registration** with Zod form validation + password strength meter
 - **Auto token refresh** — Axios interceptor silently refreshes on 401
 - **Dashboard** with stats overview (total, pending, in-progress, completed)
-- **Task cards** with inline toggle, edit, delete (kebab menu)
 - **Filters bar** — search, status, priority, sort — all in real-time
-- **Pagination** bar with smart ellipsis
 - **Toast notifications** via Sonner
 - Fully **responsive** — mobile sidebar + desktop fixed sidebar
 - **Loading skeletons** while data fetches
@@ -43,12 +40,6 @@ task-management/
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Node.js 18+
-- PostgreSQL running locally (or a cloud URL)
-- npm or pnpm
-
----
 
 ### 1. Backend Setup
 
@@ -58,17 +49,8 @@ cd task-management/backend
 # Install dependencies
 npm install
 
-# Create your .env from the example
-cp .env.example .env
-```
+# Create your .env from the example of .env.example
 
-Edit `.env`:
-```env
-DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/task_management"
-JWT_ACCESS_SECRET=replace_with_a_long_random_string
-JWT_REFRESH_SECRET=replace_with_another_long_random_string
-FRONTEND_URL=http://localhost:3000
-```
 
 ```bash
 # Push schema to DB and generate Prisma client
@@ -89,25 +71,16 @@ cd task-management/frontend
 # Install dependencies
 npm install
 
-# Create your .env.local from the example
-cp .env.example .env.local
-```
+# Create your .env.local from the example of .env.example
 
-Edit `.env.local`:
-```env
-NEXT_PUBLIC_API_URL=http://localhost:4000
-```
 
 ```bash
-# Start dev server (http://localhost:3000)
+# Start dev server
 npm run dev
-```
-
-Open **http://localhost:3000** — you'll be redirected to login.
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Auth  `/auth`
 | Method | Path              | Auth | Description                         |
@@ -168,14 +141,5 @@ RefreshToken id, token (unique), userId, expiresAt, createdAt
 | HTTP     | Axios (with auto-refresh interceptor)       |
 | Toasts   | Sonner                                      |
 
----
 
-## 🏗 Production Build
 
-```bash
-# Backend
-cd backend && npm run build && npm start
-
-# Frontend
-cd frontend && npm run build && npm start
-```
