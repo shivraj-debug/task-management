@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 93%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 93%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 243 75% 96%;
+    --accent-foreground: 243 75% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 243 75% 59%;
+
+    --radius: 0.75rem;
+
+    /* Status colours */
+    --status-pending: 38 92% 50%;
+    --status-pending-bg: 48 100% 96%;
+    --status-in-progress: 217 91% 60%;
+    --status-in-progress-bg: 213 100% 96%;
+    --status-completed: 142 71% 45%;
+    --status-completed-bg: 138 76% 96%;
+
+    /* Priority colours */
+    --priority-low: 142 71% 45%;
+    --priority-low-bg: 138 76% 96%;
+    --priority-medium: 38 92% 50%;
+    --priority-medium-bg: 48 100% 96%;
+    --priority-high: 0 84% 60%;
+    --priority-high-bg: 0 100% 97%;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 213 31% 91%;
+
+    --primary: 243 75% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 47% 12%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 222 47% 12%;
+    --muted-foreground: 215 16% 57%;
+
+    --accent: 243 75% 14%;
+    --accent-foreground: 243 75% 80%;
+
+    --destructive: 0 63% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 47% 16%;
+    --input: 222 47% 16%;
+    --ring: 243 75% 66%;
+
+    --status-pending: 38 92% 60%;
+    --status-pending-bg: 38 50% 12%;
+    --status-in-progress: 217 91% 65%;
+    --status-in-progress-bg: 217 50% 12%;
+    --status-completed: 142 71% 50%;
+    --status-completed-bg: 142 30% 12%;
+
+    --priority-low: 142 71% 50%;
+    --priority-low-bg: 142 30% 12%;
+    --priority-medium: 38 92% 60%;
+    --priority-medium-bg: 38 50% 12%;
+    --priority-high: 0 84% 65%;
+    --priority-high-bg: 0 50% 12%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.35s ease-out both;
+  }
+  .stagger-1 { animation-delay: 0.05s; }
+  .stagger-2 { animation-delay: 0.10s; }
+  .stagger-3 { animation-delay: 0.15s; }
+  .stagger-4 { animation-delay: 0.20s; }
+}
