@@ -65,7 +65,6 @@ npm run dev
 
 ### 2. Frontend Setup
 
-```bash
 cd task-management/frontend
 
 # Install dependencies
@@ -74,7 +73,6 @@ npm install
 # Create your .env.local from the example of .env.example
 
 
-```bash
 # Start dev server
 npm run dev
 
@@ -124,9 +122,8 @@ Task         id, title, description?, status, priority, dueDate?, userId, timest
 RefreshToken id, token (unique), userId, expiresAt, createdAt
 ```
 
----
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer    | Technology                                  |
 |----------|---------------------------------------------|
