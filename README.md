@@ -52,7 +52,7 @@ npm install
 # Create your .env from the example of .env.example
 
 
-```bash
+
 # Push schema to DB and generate Prisma client
 npm run db:push
 npm run db:generate
@@ -65,6 +65,8 @@ npm run dev
 
 ### 2. Frontend Setup
 
+```bash
+
 cd task-management/frontend
 
 # Install dependencies
@@ -75,7 +77,7 @@ npm install
 
 # Start dev server
 npm run dev
-
+```
 ---
 
 ## API Endpoints
